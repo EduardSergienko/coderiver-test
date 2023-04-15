@@ -1,0 +1,79 @@
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.navigationList {
+  display: flex;
+  @media screen and (max-width: 1279px) {
+    flex-direction: column;
+    background-color: #e1e3e9;
+    height: 100vh;
+    gap: 70px;
+    padding-top: 25px;
+  }
+  align-items: center;
+  gap: 105px;
+  & li {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+  }
+}
+
+.navLink {
+  position: relative;
+
+  &:hover::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background-color: #000000;
+    left: 0;
+    bottom: -5px;
+    animation: slideInLeft 250ms linear;
+    animation-direction: alternate;
+  }
+}
+.buyLink {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 50px;
+  display: inline-block;
+  color: #ffffff;
+  padding: 20px 18px;
+  background-color: red;
+  border-radius: 50%;
+  & span {
+    display: inline-block;
+    transform: rotate(19.5deg);
+  }
+  &:hover {
+    animation: spin 1000ms linear;
+    animation-iteration-count: infinite;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(-19deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

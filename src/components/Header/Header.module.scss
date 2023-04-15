@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.logo {
+  font-family: "Jomhuria";
+  font-size: 80px;
+  line-height: 80px;
+  color: #2e3341;
+}
+.mainNav {
+  @media screen and (max-width: 1279px) {
+    display: none;
+  }
+}
+.sideMenuToggle {
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+}
