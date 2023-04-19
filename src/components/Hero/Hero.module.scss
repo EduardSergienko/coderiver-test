@@ -18,8 +18,14 @@
   }
 }
 .appInfo {
+  & a {
+    display: inline-block;
+  }
   & p {
     margin-top: 12px;
+  }
+  & a + a {
+    transform: translateX(-25%);
   }
 }
 

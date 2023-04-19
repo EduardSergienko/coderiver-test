@@ -5,6 +5,7 @@ import { ReactComponent as Ios } from "../../img/svg/ios.svg";
 import HeroImg from "../../img/hero_img.png";
 import Zoom from "react-reveal/Zoom";
 import Fade from "react-reveal/Fade";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -13,8 +14,13 @@ export default function Hero() {
         <div className={styles.heroWrap}>
           <div className={styles.leftBox}>
             <div className={styles.appInfo}>
-              <Ios />
-              <Android style={{ transform: "translateX(-25%)" }} />
+              <Link>
+                <Ios />
+              </Link>
+              <Link>
+                <Android />
+              </Link>
+
               <p>App available</p>
             </div>
 
