@@ -8,15 +8,25 @@
     opacity: 1;
   }
 }
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(-19deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 
 .navigationList {
   display: flex;
   @media screen and (max-width: 1279px) {
     flex-direction: column;
-    background-color: #e1e3e9;
-    height: 100vh;
     gap: 70px;
-    padding-top: 25px;
+    padding: 25px 0;
   }
   align-items: center;
   gap: 105px;
@@ -54,26 +64,13 @@
   display: inline-block;
   color: #ffffff;
   padding: 20px 18px;
-  background-color: red;
+  background-color: #f54329;
   border-radius: 50%;
+  animation: spin 1000ms linear;
+  animation-iteration-count: infinite;
+
   & span {
     display: inline-block;
     transform: rotate(19.5deg);
-  }
-  &:hover {
-    animation: spin 1000ms linear;
-    animation-iteration-count: infinite;
-  }
-}
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  50% {
-    transform: rotate(-19deg);
-  }
-  100% {
-    transform: rotate(0deg);
   }
 }

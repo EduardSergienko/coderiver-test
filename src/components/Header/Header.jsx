@@ -29,8 +29,9 @@ export default function Header() {
         </header>
       </Container>
       <Menu
+        customCrossIcon={false}
         customBurgerIcon={false}
-        width={400}
+        width={"100%"}
         onClose={handleMenuOpen}
         isOpen={isMenuOpen}
         right
