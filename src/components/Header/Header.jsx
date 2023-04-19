@@ -6,15 +6,21 @@ import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { GrClose } from "react-icons/gr";
 import { slide as Menu } from "react-burger-menu";
+import { useMediaQuery } from "@mui/material";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const mobileWidth = useMediaQuery("(max-width:1279px)");
   const handleMenuOpen = () => {
     setIsMenuOpen(!isMenuOpen);
   };
   useEffect(() => {
     if (isMenuOpen) document.body.style.overflow = "hidden";
     else document.body.style.overflow = "visible";
-  }, [isMenuOpen]);
+    if (!mobileWidth) {
+      setIsMenuOpen(false);
+    }
+  }, [isMenuOpen, mobileWidth]);
+
   return (
     <>
       <Container>

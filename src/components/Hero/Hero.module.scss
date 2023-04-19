@@ -1,9 +1,11 @@
 .hero {
   padding: 45px 0;
-  background-image: url("../../img/svg/Vector_bgr.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position-y: 10%;
+  @media screen and (min-width: 1280px) {
+    background-image: url("../../img/svg/Vector_bgr.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 10%;
+  }
 }
 .heroWrap {
   display: flex;

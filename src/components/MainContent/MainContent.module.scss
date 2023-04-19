@@ -10,8 +10,11 @@
   margin-bottom: 60px;
 }
 .aboutSection {
-  padding: 0 48px 40px 48px;
+  padding: 0 20px 40px 20px;
   & p + p {
     margin-top: 27px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding: 0 48px 40px 48px;
   }
 }
